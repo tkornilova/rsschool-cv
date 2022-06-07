@@ -24,3 +24,10 @@ function multiply(a, b){
   return a * b
 }
 ```
+
+## Learning projects:
+
+* [Sedona](https://github.com/tkornilova/1763669-sedona-31)
+* [Nerds](https://github.com/tkornilova/1763669-nerds-31)
+* [Pink](https://github.com/tkornilova/1763669-pink-23)
+* [Kekstagram](https://github.com/tkornilova/1763669-kekstagram-24)
