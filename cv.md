@@ -38,3 +38,8 @@ function multiply(a, b){
 * HTML Academy: HTML & CSS 2
 * HTML Academy: JavaScript
 * RS School: JavaScript/Front-end. Stage 0 (in progress)
+
+## Languages:
+
+* Russian - native
+* English - B2 (IELTS certificate)
