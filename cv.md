@@ -16,3 +16,11 @@ Changing something in your life is quite a difficult step for many of us. After 
 * CSS
 * Git/Github
 * JavaScript (in progress)
+
+## Code example:
+
+```javascript
+function multiply(a, b){
+  return a * b
+}
+```
