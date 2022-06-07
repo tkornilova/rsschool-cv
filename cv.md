@@ -31,3 +31,10 @@ function multiply(a, b){
 * [Nerds](https://github.com/tkornilova/1763669-nerds-31)
 * [Pink](https://github.com/tkornilova/1763669-pink-23)
 * [Kekstagram](https://github.com/tkornilova/1763669-kekstagram-24)
+
+## Courses:
+
+* HTML Academy: HTML & CSS 1
+* HTML Academy: HTML & CSS 2
+* HTML Academy: JavaScript
+* RS School: JavaScript/Front-end. Stage 0 (in progress)
