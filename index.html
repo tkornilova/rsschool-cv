@@ -1,15 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="assets/fonts/montserrat-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="icon" href="assets/favicon.ico">
-    <title>CV</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="assets/fonts/montserrat-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="assets/favicon.ico">
+  <title>CV</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#contacts">Contacts</a>
+        </li>
+        <li>
+          <a href="#aboutme">About Me</a>
+        </li>
+        <li>
+          <a href="#education">Education</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#code">Code Examples</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#courses">Courses</a>
+        </li>
+        <li>
+          <a href="#languages">Languages</a>
+        </li>
+      </ul>
 
+    </nav>
+  </header>
+  <main>
+    <h1 class="visually-hidden">CV Tatiana Kornilova</h1>
+    <section class="left-side">
+      <div class="left-side-photo">
+        <h2 class="visually-hidden">Photo</h2>
+        <img src="assets/img/avatar.png" alt="User picture" width="320" height="320">
+      </div>
+      <div class="left-side-contacts" id="contacts">
+        <h2>Contact information:</h2>
+        <ul>
+          <li>
+            <a href="tel:+79111788535"><span>Phone:</span> +7 (911) 178 85-35</a>
+          </li>
+          <li>
+            <a href="mailto:ornilova.tat07@gmail.com"><span>Email:</span> kornilova.tat07@gmail.com</a>
+          </li>
+          <li>
+            <a href="https://t.me/tanikornilova"><span>Telegram:</span>@tanikornilova</a>
+          </li>
+        </ul>
+      </div>
+      <div class="left-side-skills" id="skills">
+        <h2>Skills:</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Git/Github</li>
+          <li>JavaScript (in progress)</li>
+        </ul>
+      </div>
+      <div class="left-side-languages" id="languages">
+        <h2>Languages:</h2>
+        <ul>
+          <li>Russian - native</li>
+          <li>English - B2 (IELTS)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="right-side">
+      <div class="right-side-name">
+        <h2 class="visually-hidden">Name</h2>
+        <p>Tatiana Kornilova</p>
+      </div>
+      <div class="right-side-aboutme" id="aboutme">
+        <h2>About Me:</h2>
+        <p>Changing something in your life is a quite difficult step for many of us. After 6 years of studying chemistry, I realized that I do not want to do it anymore.</p>
+        <p>I first started coding when I was at school, and now I decided to try it again. It was fascinating to watch how you can change font, color, size of the caption by just writing some code. I am glad to be here and take part of this EPAM project. I hope it will help me in the future to become a cool frontend developer :)</p>
+      </div>
+      <div class="right-side-education" id="education">
+        <h2>Education:</h2>
+        <ul>
+          <li>BS: Saint-Petersburg State University of Industrial Technologies and Design (2015-2019)</li>
+          <li>MS: New Mexico Highlands University (2020-2022)</li>
+        </ul>
+      </div>
+      <div class="right-side-courses" id="courses">
+        <h2>Courses:</h2>
+        <ul>
+          <li>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy: HTML & CSS 1</a>
+          </li>
+          <li>
+            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy: HTML & CSS 2</a>
+          </li>
+          <li>
+            <a href="https://htmlacademy.ru/intensive/javascript">HTML Academy: JavaScript 1</a>
+          </li>
+          <li>
+            <a href="https://wearecommunity.io/events/js-stage0-rs-2022q2">RS School: JavaScript/Front-end. Stage 0 (in progress)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right-side-projects" id="projects">
+        <h2>Learning projects:</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/tkornilova/1763669-sedona-31">Sedona</a>
+            <img src="assets/img/sedona.jpg" alt="Sedona web cite" width="320" height="160">
+          </li>
+          <li>
+            <a href="https://github.com/tkornilova/1763669-nerds-31">Nerds</a>
+            <img src="assets/img/nerds.jpg" alt="Nerds web cite" width="320" height="160">
+          </li>
+          <li>
+            <a href="https://github.com/tkornilova/1763669-pink-23">Pink</a>
+            <img src="assets/img/pink.jpg" alt="Pink web cite" width="320" height="160">
+          </li>
+          <li>
+            <a href="https://github.com/tkornilova/1763669-kekstagram-24">Kekstagram</a>
+            <img src="assets/img/kekstagram.jpg" alt="Kekstagram web cite" width="320" height="160">
+          </li>
+        </ul>
+      </div>
+      <div class="right-side-code" id="code">
+        <h2>Code examples:</h2>
+        <pre>
+          <code>
+            const square = (num) => {
+              return num * num;
+            };
+        </code>
+      </pre>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="https://github.com/tkornilova">
+      <img src="assets/img/icons/github.png" alt="GitHub logo" width="32" height="32">
+    </a>
+    <p>2022</p>
+    <a href="https://rs.school/js/">
+      <img src="assets/img/icons/rs-school.svg" alt="RS School logo" width="83" height="30">
+    </a>
+  </footer>
 </body>
 </html>
