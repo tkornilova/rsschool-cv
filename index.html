@@ -48,7 +48,7 @@
 
     <section class="left-side">
       <div class="left-side-photo">
-        <img src="assets/img/avatar.jpg" alt="User picture" width="320" height="auto">
+        <img src="assets/img/avatar.jpg" alt="User picture" width="320" height="448">
       </div>
       <div class="left-side-contacts" id="contacts">
         <h2>Contact information:</h2>
@@ -155,10 +155,10 @@
       function explode(s) {
         let result = '';
 
-        for (let i = 0; i < s.length; i++) {
+        for (let i = 0; i &lt; s.length; i++) {
           let tempNum = Number(s[i]);
 
-          for (let j = 1; j <= tempNum; j++) {
+          for (let j = 1; j &lt;= tempNum; j++) {
             result = `${result}${tempNum}`;
           }
         }
