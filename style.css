@@ -1,0 +1,314 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/montserrat-400.woff2") format(woff2), url("assets/fonts/montserrat-400.woff") format(woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/montserrat-500.woff2") format(woff2), url("assets/fonts/montserrat-500.woff") format(woff);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/montserrat-700.woff2") format(woff2), url("assets/fonts/montserrat-700.woff") format(woff);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Colors */
+
+:root {
+  --basic-white: rgba(255, 255, 255, 1);
+  --brown-light: rgba(241, 232, 227, 1);
+  --brown-dark: rgba(89, 83, 79, 1);
+  --brown-dark-40: rgba(89, 83, 79, 0.4);
+  --brown-dark-70: rgba(89, 83, 79, 0.7);
+  --brown-dark-90: rgba(89, 83, 79, 0.9);
+  --shadow: rgba(0, 1, 1, 0.15);
+}
+
+/* General */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--brown-dark);
+}
+
+page {
+  height: 100%;
+  margin: 0 auto;
+}
+
+body {
+  min-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--brown-dark);
+  background: url('assets/img/background-noise.png') repeat;
+}
+
+/* Blocks */
+/* Header */
+
+.navigation {
+  width: 100%;
+  height: 85px;
+  margin: 0 auto;
+  background-color: var(--brown-dark-40);
+}
+
+.navigation-list {
+  width: 1000px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.navigation-item {
+  width: fit-content;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-item:hover,
+.navigation-item:focus {
+  background-color: var(--brown-dark-70);
+  box-shadow: 0px 5px 15px var(--shadow);
+  transition: 0.6s;
+}
+
+.navigation-item a {
+  color: var(--basic-white);
+  padding: 20px 20px;
+}
+
+.navigation-item:hover a,
+.navigation-item:focus a {
+  color: var(--basic-white);
+  transition: 0.6s;
+}
+
+/* Main */
+
+main {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+.left-side {
+  width: 400px;
+  padding: 30px 10px 30px;
+  background-color: var(--brown-dark-40);
+  box-sizing: border-box;
+}
+
+.left-side h2,
+.right-side h2 {
+  font-size: 18px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+  position: relative;
+}
+
+.left-side h2::after,
+.right-side h2::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--brown-dark-40);
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.left-side div {
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px 0 20px;
+  color: var(--basic-white);
+}
+
+.left-side ul,
+.right-side ul {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.left-side li,
+.right-side li {
+  padding-bottom: 6px;
+}
+
+.left-side-contacts-list a {
+  color: var(--basic-white);
+}
+
+.left-side-contacts-list span {
+  font-weight: 700;
+}
+
+.left-side-skills-item {
+  position: relative;
+  padding-left: 35px;
+  padding-bottom: 10px;
+}
+
+.left-side-skills-item::before {
+  content: url('assets/img/icons/bullet-1.png');
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 3px;
+  top: 1px;
+}
+
+.right-side {
+  box-shadow: 0px 5px 15px var(--shadow);
+  padding: 90px 10px 30px;
+  width: 700px;
+  box-sizing: border-box;
+}
+
+.right-side div {
+  width: 620px;
+  margin: 0 auto;
+  padding: 20px 0 20px;
+}
+
+.right-side-name span {
+  font-size: 50px;
+  font-weight: 700;
+  padding: 90px 0 60px;
+  margin: 0 auto;
+}
+
+.right-side-name p {
+  margin: 15px auto 35px;
+  font-size: 26px;
+}
+
+.education-item {
+  padding-left: 45px;
+  position: relative;
+}
+
+.education-item::before {
+  content: url('assets/img/icons/diploma.png');
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+}
+
+.projects-item {
+  width: 600px;
+  height: 300px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.projects-item div {
+  display: none;
+}
+
+.projects-item div a {
+  color: var(--basic-white);
+  font-size: 30px;
+  padding: 0 50px 0px;
+  text-align: center;
+  letter-spacing: 0.7px;
+  line-height: 35px;
+}
+
+.projects-item:hover div,
+.projects-item:focus div {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--brown-dark-90);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0px 5px 15px var(--shadow);
+  transition: 0.6s;
+}
+
+.right-side-code pre {
+  background-color: var(--basic-white);
+}
+
+.right-side-code code {
+  font-size: 20px;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: var(--brown-dark-40);
+  margin: 0 auto;
+}
+
+.footer-wrapper {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer-wrapper p {
+  font-size: 30px;
+}
