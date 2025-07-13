@@ -57,6 +57,7 @@ html {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 li {
@@ -68,6 +69,14 @@ a {
   color: inherit;
 }
 
+a:focus {
+  outline: none;
+}
+
+p {
+  margin: 0;
+}
+
 .page {
   margin: 0 auto;
   font-family: "Montserrat", Arial, sans-serif;
@@ -76,6 +85,7 @@ a {
   font-weight: 400;
   color: var(--brown-dark);
   background: url('assets/img/background-noise.png') repeat;
+  box-sizing: border-box;
 }
 
 /* Blocks */
@@ -139,8 +149,8 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 200px;
-  padding: 0 100px;
+  gap: 12%;
+  padding: 0 8%;
   margin: 0 auto;
 }
 
@@ -159,7 +169,7 @@ main {
 }
 
 .aside__title,
-.right-side h2 {
+.content__title {
   font-size: 18px;
   letter-spacing: 1.7px;
   text-transform: uppercase;
@@ -168,7 +178,7 @@ main {
 }
 
 .aside__title::after,
-.right-side h2::after {
+.content__title::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -219,85 +229,119 @@ main {
   top: 1px;
 }
 
-.right-side {
-  inline-size: 100%;
+/* Content */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
   box-shadow: 0px 5px 15px var(--shadow);
   padding: 90px 10px 30px;
-  box-sizing: border-box;
 }
 
-.right-side div {
-  width: 620px;
-  margin: 0 auto;
-  padding: 20px 0 20px;
+.content__block {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.right-side-name span {
+.name__name {
   font-size: 50px;
+  line-height: 50px;
   font-weight: 700;
-  padding: 90px 0 60px;
-  margin: 0 auto;
 }
 
-.right-side-name p {
-  margin: 15px auto 35px;
+.name__position {
   font-size: 26px;
 }
 
-.education-item {
+.education__list,
+.courses__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.education__item {
   padding-left: 45px;
   position: relative;
 }
 
-.education-item::before {
+.education__item::before {
   content: url('assets/img/icons/diploma.png');
-  width: 25px;
-  height: 25px;
+  inline-size: 25px;
+  block-size: 25px;
   position: absolute;
   top: 3px;
   left: 4px;
 }
 
-.projects-item {
-  width: 600px;
-  height: 300px;
-  margin-bottom: 20px;
+.courses__link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: 0.6s ease text-decoration;
+}
+
+.courses__link:hover,
+.courses__link:focus-visible {
+  text-decoration-color: var(--brown-dark);
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projects__item {
+  block-size: 300px;
   position: relative;
 }
 
-.projects-item div {
-  display: none;
-  transition: 1s;
-}
-
-.projects-item div a {
+.projects__link {
+  opacity: 0;
   color: var(--basic-white);
   font-size: 30px;
-  padding: 0 50px 0px;
+  line-height: 35px;
   text-align: center;
   letter-spacing: 0.7px;
-  line-height: 35px;
-}
-
-.projects-item:hover div,
-.projects-item:focus div {
-  width: 600px;
+  position: absolute;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   background-color: var(--brown-dark-90);
-  position: absolute;
-  top: 0;
-  bottom: 0;
   box-shadow: 0px 5px 15px var(--shadow);
-  transition: 1s;
+  transition: 0.6s ease opacity;
 }
 
-.right-side-code pre {
+.projects__item:hover .projects__link,
+.projects__item:focus-within .projects__link {
+  opacity: 1;
+  overflow: scroll;
+}
+
+.projects__img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.code pre {
   background-color: var(--basic-white);
+  margin: 10px 0;
 }
 
-.right-side-code code {
+.code code {
   font-size: 20px;
 }
 
@@ -321,11 +365,6 @@ main {
 .footer__github,
 .footer__rs {
   transition: 0.4s ease transform;
-}
-
-.footer__github:focus,
-.footer__rs:focus {
-  outline: none;
 }
 
 .footer__github:hover,
