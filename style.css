@@ -55,13 +55,17 @@ html {
   scroll-behavior: smooth;
 }
 
+ul {
+  padding: 0;
+}
+
 li {
   list-style: none;
 }
 
 a {
   text-decoration: none;
-  color: var(--brown-dark);
+  color: inherit;
 }
 
 .page {
@@ -130,31 +134,40 @@ a {
 /* Main */
 
 main {
-  width: 1200px;
+  max-inline-size: 1440px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 200px;
+  padding: 0 100px;
   margin: 0 auto;
 }
 
-.left-side {
-  width: 400px;
-  padding: 30px 10px 30px;
+.aside {
+  inline-size: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px 20px 30px;
   background-color: var(--brown-dark-40);
-  box-sizing: border-box;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: var(--basic-white);
 }
 
-.left-side h2,
+.aside__title,
 .right-side h2 {
   font-size: 18px;
   letter-spacing: 1.7px;
   text-transform: uppercase;
-  margin: 0 0 30px;
+  margin: 0;
   position: relative;
 }
 
-.left-side h2::after,
+.aside__title::after,
 .right-side h2::after {
   content: "";
   width: 100%;
@@ -167,39 +180,37 @@ main {
   margin: 0 auto;
 }
 
-.left-side div {
-  width: 320px;
-  margin: 0 auto;
-  padding: 20px 0 20px;
-  color: var(--basic-white);
+.contacts,
+.skills,
+.languages {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.left-side ul,
-.right-side ul {
-  padding: 0;
-  margin: 0 auto;
+.contacts__list,
+.skills__list,
+.languages__list {
+  margin: 0;
 }
 
-.left-side li,
+.contacts__item,
 .right-side li {
   padding-bottom: 6px;
 }
 
-.left-side-contacts-list a {
-  color: var(--basic-white);
-}
-
-.left-side-contacts-list span {
+.contacts__link span {
   font-weight: 700;
 }
 
-.left-side-skills-item {
+.skills__item {
   position: relative;
   padding-left: 35px;
   padding-bottom: 10px;
 }
 
-.left-side-skills-item::before {
+.skills__item::before {
   content: url('assets/img/icons/bullet-1.png');
   width: 22px;
   height: 22px;
@@ -209,9 +220,9 @@ main {
 }
 
 .right-side {
+  inline-size: 100%;
   box-shadow: 0px 5px 15px var(--shadow);
   padding: 90px 10px 30px;
-  width: 700px;
   box-sizing: border-box;
 }
 
