@@ -88,6 +88,11 @@ p {
   box-sizing: border-box;
 }
 
+.container {
+  max-inline-size: 1440px;
+  margin: 0 auto;
+}
+
 /* Blocks */
 /* Header */
 
@@ -96,7 +101,6 @@ p {
 }
 
 .navigation {
-  max-inline-size: 1440px;
   inline-size: 80%;
   padding: 20px 30px;
   margin: 0 auto;
@@ -143,19 +147,20 @@ p {
 
 /* Main */
 
-main {
-  max-inline-size: 1440px;
+.container--main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 12%;
-  padding: 0 8%;
+  gap: 7%;
+  padding: 0 5%;
   margin: 0 auto;
 }
 
+/* Aside */
+
 .aside {
-  inline-size: 400px;
+  max-inline-size: 400px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -166,6 +171,11 @@ main {
   line-height: inherit;
   font-weight: inherit;
   color: var(--basic-white);
+}
+
+.aside__img {
+  inline-size: 100%;
+  block-size: auto;
 }
 
 .aside__title,
@@ -236,7 +246,7 @@ main {
   flex-direction: column;
   gap: 35px;
   box-shadow: 0px 5px 15px var(--shadow);
-  padding: 90px 10px 30px;
+  padding: 60px 10px;
 }
 
 .content__block {
@@ -339,21 +349,23 @@ main {
 .code pre {
   background-color: var(--basic-white);
   margin: 10px 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
 }
 
 .code code {
   font-size: 20px;
+  white-space: pre-wrap;
 }
 
 /* Footer */
 
 .footer {
   background-color: var(--brown-dark-40);
-  margin: 0 auto;
 }
 
 .footer__wrapper {
-  max-inline-size: 1440px;
   min-block-size: 80px;
   display: flex;
   flex-direction: row;
