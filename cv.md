@@ -27,10 +27,9 @@ function multiply(a, b){
 
 ## Learning projects:
 
-* [Sedona](https://github.com/tkornilova/1763669-sedona-31)
-* [Nerds](https://github.com/tkornilova/1763669-nerds-31)
-* [Pink](https://github.com/tkornilova/1763669-pink-23)
-* [Kekstagram](https://github.com/tkornilova/1763669-kekstagram-24)
+* [No focus](https://tkornilova.github.io/slozhno-sosredotochitsya-fd/)
+* [Look out the window](https://tkornilova.github.io/posmotri-v-okno-fd/)
+* [Do you need it?](https://tkornilova.github.io/ono-tebe-nado-fd/)
 
 ## Courses:
 
