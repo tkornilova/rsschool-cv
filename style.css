@@ -1,3 +1,18 @@
+/* Colors */
+
+:root {
+  --basic-white: rgba(255, 255, 255, 1);
+  --brown-dark: rgba(89, 83, 79, 1);
+  --brown-dark-40: rgba(89, 83, 79, 0.4);
+  --brown-dark-70: rgba(89, 83, 79, 0.7);
+  --brown-dark-90: rgba(89, 83, 79, 0.9);
+  --shadow: rgba(0, 1, 1, 0.15);
+  --operator: rgba(204, 0, 0, 1);
+  --param: rgba(0, 170, 0, 1);
+  --function: rgba(221, 17, 68, 1);
+  --keyword: rgba(0, 113, 243, 1);
+}
+
 /* Fonts */
 
 @font-face {
@@ -10,30 +25,10 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("assets/fonts/montserrat-500.woff2") format(woff2), url("assets/fonts/montserrat-500.woff") format(woff);
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
   src: url("assets/fonts/montserrat-700.woff2") format(woff2), url("assets/fonts/montserrat-700.woff") format(woff);
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-}
-
-/* Colors */
-
-:root {
-  --basic-white: rgba(255, 255, 255, 1);
-  --brown-light: rgba(241, 232, 227, 1);
-  --brown-dark: rgba(89, 83, 79, 1);
-  --brown-dark-40: rgba(89, 83, 79, 0.4);
-  --brown-dark-70: rgba(89, 83, 79, 0.7);
-  --brown-dark-90: rgba(89, 83, 79, 0.9);
-  --shadow: rgba(0, 1, 1, 0.15);
 }
 
 /* General */
@@ -93,6 +88,47 @@ p {
   margin: 0 auto;
 }
 
+.text-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.block-flex {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.title {
+  font-size: 18px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+}
+
+.title::after{
+  content: "";
+  inline-size: 100%;
+  block-size: 2px;
+  background-color: var(--brown-dark-40);
+  position: absolute;
+  top: 140%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 /* Blocks */
 /* Header */
 
@@ -135,10 +171,6 @@ p {
   transition: 0.6s ease background-color, 0.6s ease box-shadow;
 }
 
-.navigation__link:focus {
-  outline: none;
-}
-
 .navigation__link:hover,
 .navigation__link:focus-visible {
   background-color: var(--brown-dark-70);
@@ -178,56 +210,9 @@ p {
   block-size: auto;
 }
 
-.aside__title,
-.content__title {
-  font-size: 18px;
-  letter-spacing: 1.7px;
-  text-transform: uppercase;
-  margin: 0;
-  position: relative;
-}
-
-.aside__title::after,
-.content__title::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: var(--brown-dark-40);
-  position: absolute;
-  top: 35px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-.contacts,
-.skills,
-.languages {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.contacts__list,
-.skills__list,
-.languages__list {
-  margin: 0;
-}
-
-.contacts__item,
-.right-side li {
-  padding-bottom: 6px;
-}
-
-.contacts__link span {
-  font-weight: 700;
-}
-
 .skills__item {
   position: relative;
-  padding-left: 35px;
-  padding-bottom: 10px;
+  padding-inline-start: 35px;
 }
 
 .skills__item::before {
@@ -249,33 +234,18 @@ p {
   padding: 60px 10px;
 }
 
-.content__block {
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+.name.block-flex {
+  gap: 20px;
 }
 
 .name__name {
   font-size: 50px;
   line-height: 50px;
-  font-weight: 700;
 }
 
 .name__position {
   font-size: 26px;
 }
-
-.education__list,
-.courses__list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 
 .education__item {
   padding-left: 45px;
@@ -291,23 +261,19 @@ p {
   left: 4px;
 }
 
-.courses__link {
+.courses__link,
+.contacts__link {
   text-decoration: underline;
   text-decoration-color: transparent;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
   transition: 0.6s ease text-decoration;
 }
 
 .courses__link:hover,
-.courses__link:focus-visible {
-  text-decoration-color: var(--brown-dark);
-}
-
-.projects__list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 20px;
+.contacts__link:hover,
+.courses__link:focus-visible,
+.contacts__link:focus-visible {
+  text-decoration-color: inherit;
 }
 
 .projects__item {
@@ -359,6 +325,23 @@ p {
   white-space: pre-wrap;
 }
 
+.keyword {
+  color: var(--keyword);
+  font-weight: bold;
+}
+
+.function-name {
+  color: var(--function);
+}
+
+.param {
+  color: var(--param);
+}
+
+.operator {
+  color: var(--operator);
+}
+
 /* Footer */
 
 .footer {
@@ -383,12 +366,11 @@ p {
 .footer__github:focus-visible,
 .footer__rs:hover,
 .footer__rs:focus-visible {
-  transform: scale(1.1);
+  transform: scale(1.25);
 }
 
 .footer__year {
   font-size: 30px;
   line-height: 30px;
-  font-weight: 700;
   color: inherit;
 }
